@@ -5,9 +5,7 @@
 <#--- @begin ImpTools -->
 
 <#---
-    Retrieve the value of environment variable name.
-
-    @param name Name of the environment variable to return
+    Retrieve the current version of the toolset.
 -->
 
 <#macro GetVersion>
