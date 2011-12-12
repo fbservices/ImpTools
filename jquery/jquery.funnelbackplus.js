@@ -38,13 +38,16 @@ var Funnelback = {
     	});		
 	},
 
-	jsonpsearch: function(query){
+	jsonpsearch: function(query, sort){
 		var fbbase = this;
 		var params = {
 		        profile: fbbase.options.profile,
 		        collection: fbbase.options.collection,
 		        query: query,
 			};
+		if (sort !== undefined) {
+			params['sort'] = sort
+		}
 		var url = fbbase.options.url + "?" + jQuery.param(params);
 		jQuery.each(fbbase.options.targets, function() {
 			fbbase.jsonprefresh(url, this['path'], fbbase.formatters[this['formatter']], fbbase.options.fbloader);
