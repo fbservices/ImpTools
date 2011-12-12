@@ -46,7 +46,7 @@ var Funnelback = {
 		        query: query,
 			};
 		if (sort !== undefined) {
-			params['sort'] = sort
+			params['sort'] = sort;
 		}
 		var url = fbbase.options.url + "?" + jQuery.param(params);
 		jQuery.each(fbbase.options.targets, function() {
